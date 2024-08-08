@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Sobre{% endblock %}
+
+{% block content %}
+<main>
+    <section class="sobre">
+        <div class="interface">
+            <div class="flex">
+                <div class="img-sobre">
+                    <img src="{% static 'img/dema-chico.jpg' %}" alt="">
+                </div>
+               
+                <div class="txt-sobre">
+                    <h2>DEMA E CHICO, <span>OS AUTORES</span></h2>
+                    <p>O site foi criado utilazando tecnologias, como: Figma, HTML5, CSS3 e Django.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
