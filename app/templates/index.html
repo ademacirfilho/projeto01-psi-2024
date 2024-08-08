@@ -1,11 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Oficial FC Barcelona</title>
+    <title>{% block title %}Site Oficial FC Barcelona{% endblock %}</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico'%}" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -14,7 +17,7 @@
             <!--Logo-->
             <div class="logo">
                 <a href="{% url 'index' %}">
-                    <img src="/img/logo-barca.png" alt="Logo do Barcelona">
+                    <img src="{% static 'img/logo-barca.png' %}" alt="Logo do Barcelona">
                 </a>
             </div>
             <!--Logo-->
@@ -23,8 +26,8 @@
             <nav>
                 <div class="links">
                     <ul>
-                        <li><a href="/jogadores.html">Jogadores</a></li>
-                        <li><a href="/sobre.html">Sobre</a></li>
+                        <li><a href="{% url 'jogadores' %}">Jogadores</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
                     </ul>
                 </div>
             </nav>
@@ -42,7 +45,7 @@
                     </div>
                     <div class="column-card">
                         <div class="card">
-                            <img src="img/not/not-1.png" alt="">
+                            <img src="{% static 'img/not/not-1.png'%}" alt="">
                             <div class="panel">
                                 <span class="date">Quinta feira, 08 de agosto</span>
                                 <p>
@@ -53,7 +56,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="img/not/not-2.png" alt="">
+                            <img src="{% static 'img/not/not-2.png'%}" alt="">
                             <div class="panel">
                                 <span class="date">Quarta feira, 07 de agosto</span>
                                 <p>
@@ -64,7 +67,7 @@
                         </div>
 
                         <div class="card">
-                            <img src="img/not/not-3.png" alt="">
+                            <img src="{% static 'img/not/not-3.png'%}" alt="">
                             <div class="panel">
                                 <span class="date">Quarta feira, 07 de agosto</span>
                                 <p>
@@ -83,19 +86,19 @@
                 <h2 class="titulo">TÍTULOS</h2>
                 <div class="flex">
                     <div class="titulos-box">
-                        <img src="/img/titulos/taca-champions.png" alt="">
+                        <img src="{% static 'img/titulos/taca-champions.png' %}" alt="">
                         <h3>Champions League - 5</h3>
                         <p id="desc">O Barcelona é um gigante da UEFA Champions League, com vitórias em 1992, 2006, 2009, 2011 e 2015. Com estrelas como Messi e Xavi, o clube encantou o mundo com seu futebol ofensivo. A busca por novas conquistas continua a inspirar torcedores.</p>
                     </div>
 
                     <div class="titulos-box">
-                        <img src="/img/titulos/taca-la-liga.png" alt="">
+                        <img src="{% static 'img/titulos/taca-la-liga.png' %}" alt="">
                         <h3>La Liga - 27</h3>
                         <p id="desc">O FC Barcelona é um dos clubes mais vitoriosos na La Liga, conquistando vários títulos ao longo de sua história, especialmente durante as décadas de 1990 e 2010, com destaque para a era de Lionel Messi. O clube é reconhecido por seu estilo de jogo ofensivo e pela formação de equipes lendárias.</p>
                     </div>
 
                     <div class="titulos-box">
-                        <img src="/img/titulos/taca-mundial.png" alt="">
+                        <img src="{% static 'img/titulos/taca-mundial.png' %}" alt="">
                         <h3>Mundial de Clubes - 3</h3>
                         <p id="desc">O FC Barcelona conquistou o Mundial de Clubes da FIFA em três ocasiões, consolidando-se como uma potência global com vitórias em 2009, 2011 e 2015. Nessas edições, o clube exibiu seu futebol ofensivo e o talento de jogadores como Messi, Xavi e Iniesta.</p>
                     </div>
