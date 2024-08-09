@@ -4,9 +4,6 @@ from django.shortcuts import render
 def index(request):
     return render(request, "index.html")
 
-def index(request):
-    return render(request, "index.html")
-
 def jogadores(request):
     jogadores = [
         {"nome": "Ter Stegen", "idade": "32", "posicao": "Goleiro", "nascimento": "Monchengladbach, Alemanha", "foto": "img/jogadores/ter-stegen.png"},
